@@ -1,6 +1,6 @@
-package com.hillel.gorich.lessons.home_work2;
+package com.hillel.gorich.lessons.home_work3;
 
-public class MyApp {
+public class MyAppTestPush {
     public static void main(String[] args) {
         System.out.println("Привет!");
         System.out.println();
