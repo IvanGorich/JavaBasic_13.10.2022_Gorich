@@ -52,7 +52,7 @@ public class GuessTheNumber {
             System.out.println("Congratulations! You guessed!");
             System.exit(0);
         } else if (forGuess != number) {
-            System.out.println("You have 1 more attempts");
+            System.out.println("You have 1 more attempt");
         }
         while (true) {
             System.out.println("Please, enter number from 1 to 10");
