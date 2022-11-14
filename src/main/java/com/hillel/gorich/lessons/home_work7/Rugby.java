@@ -47,15 +47,15 @@ public class Rugby {
 
         for (int i = 0; i < team1.length; i++) {
             sumAgeTeam1 += team1[i];
-            averageAgeTeam1 = sumAgeTeam1 / team1.length;
         }
+        averageAgeTeam1 = sumAgeTeam1 / team1.length;
         System.out.println("Average age of first team players: " + Math.round(averageAgeTeam1));
         System.out.println();
 
         for (int i = 0; i < team2.length; i++) {
             sumAgeTeam2 += team2[i];
-            averageAgeTeam2 = sumAgeTeam2 / team2.length;
         }
+        averageAgeTeam2 = sumAgeTeam2 / team2.length;
         System.out.println("Average age of second team players: " + Math.round(averageAgeTeam2));
         System.out.println();
 
