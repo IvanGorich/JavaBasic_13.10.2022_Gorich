@@ -5,8 +5,8 @@ import java.util.Scanner;
 public class TranspositionOfMatrices {
     public static void main(String[] args) {
 
-        int M = 0;
-        int N = 0;
+        int M;
+        int N;
 
         Scanner scanner = new Scanner(System.in);
 
