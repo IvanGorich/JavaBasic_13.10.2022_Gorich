@@ -3,7 +3,6 @@ package com.hillel.gorich.lessons.home_work11;
 public class Burger {
     String bun;
     String meat;
-    String plusMeat;
     String cheese;
     String greens;
     String mayo;
@@ -14,6 +13,7 @@ public class Burger {
         this.cheese = cheese;
         this.greens = greens;
         this.mayo = mayo;
+        System.out.println(this);
     }
 
     @Override
@@ -42,15 +42,14 @@ public class Burger {
     }
 
 
-    public Burger(String bun, String meat, String plusMeat, String cheese, String greens, String mayo) {
+    public Burger(String bun, String meat, String cheese, String greens, String mayo, boolean isDouble) {
         this.bun = bun;
-        this.meat = meat;
-        this.plusMeat = plusMeat;
+        this.meat = isDouble ? "doubleMeat" : meat;
         this.cheese = cheese;
         this.greens = greens;
         this.mayo = mayo;
-        System.out.println("Burger 'doubleMeat' consists of: " + bun + ", " + meat + ", " +
-                plusMeat + ", " + cheese + ", " + greens + ", " + mayo +
-                ".");
+
+        System.out.println("Burger 'doubleMeat' consists of: " + this.bun + ", " +
+                this.meat + ", " + this.cheese + ", " + this.greens + ", " + this.mayo + ".");
     }
 }

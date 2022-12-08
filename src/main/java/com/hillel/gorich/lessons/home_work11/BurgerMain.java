@@ -2,12 +2,12 @@ package com.hillel.gorich.lessons.home_work11;
 
 public class BurgerMain {
     public static void main(String[] args) {
+
         Burger full = new Burger("bun", "meat", "cheese", "greens", "mayo");
-        System.out.println(full);
 
         Burger dietetic = new Burger("bun", "meat", "cheese", "greens");
 
-        Burger doubleMeat = new Burger("bun", "meat", "plusMeat", "cheese", "greens",
-                "mayo");
+        Burger doubleMeat = new Burger("bun", "meat", "cheese", "greens", "mayo",
+                true);
     }
 }
