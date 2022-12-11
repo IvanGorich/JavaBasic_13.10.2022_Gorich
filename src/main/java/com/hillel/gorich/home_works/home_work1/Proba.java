@@ -1,4 +1,4 @@
-package com.hillel.gorich.lessons.home_work1;
+package com.hillel.gorich.home_works.home_work1;
 
 public class Proba {
     public static void main(String[] args) {

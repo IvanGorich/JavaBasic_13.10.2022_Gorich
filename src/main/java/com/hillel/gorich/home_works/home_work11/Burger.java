@@ -1,4 +1,4 @@
-package com.hillel.gorich.lessons.home_work11;
+package com.hillel.gorich.home_works.home_work11;
 
 public class Burger {
     String bun;

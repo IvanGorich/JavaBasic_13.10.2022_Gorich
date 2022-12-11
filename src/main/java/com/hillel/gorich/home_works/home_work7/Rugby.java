@@ -1,6 +1,4 @@
-package com.hillel.gorich.lessons.home_work7;
-
-import java.util.Arrays;
+package com.hillel.gorich.home_works.home_work7;
 
 public class Rugby {
     public static void main(String[] args) {

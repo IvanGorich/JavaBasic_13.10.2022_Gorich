@@ -1,4 +1,4 @@
-package com.hillel.gorich.lessons.home_work8;
+package com.hillel.gorich.home_works.home_work8;
 
 import java.util.Arrays;
 

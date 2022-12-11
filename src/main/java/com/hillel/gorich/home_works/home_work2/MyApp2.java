@@ -1,4 +1,4 @@
-package com.hillel.gorich.lessons.home_work2;
+package com.hillel.gorich.home_works.home_work2;
 
 public class MyApp2 {
     public static void main(String[] args) {

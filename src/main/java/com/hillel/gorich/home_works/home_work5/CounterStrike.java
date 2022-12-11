@@ -1,4 +1,4 @@
-package com.hillel.gorich.lessons.home_work5;
+package com.hillel.gorich.home_works.home_work5;
 
 import java.util.Scanner;
 

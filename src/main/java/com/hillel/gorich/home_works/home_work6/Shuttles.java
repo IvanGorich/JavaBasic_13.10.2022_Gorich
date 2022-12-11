@@ -1,4 +1,4 @@
-package com.hillel.gorich.lessons.home_work6;
+package com.hillel.gorich.home_works.home_work6;
 
 public class Shuttles {
     public static void main(String[] args) {
