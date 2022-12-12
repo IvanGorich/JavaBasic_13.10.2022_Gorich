@@ -9,7 +9,7 @@ public class Main {
         System.out.println();
 
         User user2 = new User("Kate", 8, 3, 1996, "katya@mail.ru", "0667895346",
-                "Ivanova" , 50, 110, 5000);
+                "Ivanova", 50, 110, 5000);
         user2.printAccountInfo();
         System.out.println();
 
@@ -18,13 +18,15 @@ public class Main {
         user3.printAccountInfo();
         System.out.println();
 
-        user1.weight = 73;
-        user1.pressure = 124;
+        user1.setWeight(73);
+        user1.setPressure(123);
+        user1.setStepNumber(7300);
         user1.printAccountInfo();
         System.out.println();
 
-        user2.weight = 48;
-        user2.stepNumber = 5600;
+        user2.setWeight(48);
+        user2.setPressure(126);
+        user2.setStepNumber(5600);
         user2.printAccountInfo();
     }
 }
