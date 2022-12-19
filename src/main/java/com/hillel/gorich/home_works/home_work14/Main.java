@@ -1,24 +1,22 @@
 package com.hillel.gorich.home_works.home_work14;
 
-import com.hillel.gorich.home_works.home_work14.music_groups.MusicGroup;
-import com.hillel.gorich.home_works.home_work14.music_groups.impl.Metal;
-import com.hillel.gorich.home_works.home_work14.music_groups.impl.Roses;
-import com.hillel.gorich.home_works.home_work14.music_groups.impl.SomeGirls;
-import com.hillel.gorich.home_works.home_work14.music_styles.MusicStyles;
-import com.hillel.gorich.home_works.home_work14.music_styles.impl.ClassicMusic;
-import com.hillel.gorich.home_works.home_work14.music_styles.impl.PopMusic;
-import com.hillel.gorich.home_works.home_work14.music_styles.impl.RockMusic;
+import com.hillel.gorich.home_works.home_work14.music_groups.MusicStiles;
+import com.hillel.gorich.home_works.home_work14.music_groups.impl.RockMusic;
+import com.hillel.gorich.home_works.home_work14.music_groups.impl.ClassicMusic;
+import com.hillel.gorich.home_works.home_work14.music_groups.impl.PopMusic;
 
 public class Main {
+
     public static void main(String[] args) {
-        MusicGroup[] musicGroups = {
-                new Metal("Metal"),
-                new Roses("Roses"),
-                new SomeGirls("SomeGirls")
+
+        MusicStiles[] musicGroups = {
+                new RockMusic("RockMusic"),
+                new ClassicMusic("ClassicMusic"),
+                new PopMusic("PopMusic")
         };
 
-        for (MusicGroup musicGroup : musicGroups) {
-            musicStyles.playMusic(musicGroup);
+        for (MusicStiles musicStiles : musicGroups) {
+            musicStiles.playMusic();
         }
     }
 }
