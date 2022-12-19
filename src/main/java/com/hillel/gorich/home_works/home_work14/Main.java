@@ -1,21 +1,21 @@
 package com.hillel.gorich.home_works.home_work14;
 
-import com.hillel.gorich.home_works.home_work14.music_groups.MusicStiles;
-import com.hillel.gorich.home_works.home_work14.music_groups.impl.RockMusic;
-import com.hillel.gorich.home_works.home_work14.music_groups.impl.ClassicMusic;
-import com.hillel.gorich.home_works.home_work14.music_groups.impl.PopMusic;
+import com.hillel.gorich.home_works.home_work14.music_styles.MusicStyles;
+import com.hillel.gorich.home_works.home_work14.music_styles.impl.RockMusic;
+import com.hillel.gorich.home_works.home_work14.music_styles.impl.ClassicMusic;
+import com.hillel.gorich.home_works.home_work14.music_styles.impl.PopMusic;
 
 public class Main {
 
     public static void main(String[] args) {
 
-        MusicStiles[] musicGroups = {
+        MusicStyles[] musicGroups = {
                 new RockMusic("RockMusic"),
                 new ClassicMusic("ClassicMusic"),
                 new PopMusic("PopMusic")
         };
 
-        for (MusicStiles musicStiles : musicGroups) {
+        for (MusicStyles musicStiles : musicGroups) {
             musicStiles.playMusic();
         }
     }
