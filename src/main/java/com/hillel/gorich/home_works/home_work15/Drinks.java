@@ -9,13 +9,13 @@ public class Drinks {
     public static final int MINERAL_WATER_PRICE = 20;
     public static final int COCA_COLA_PRICE = 50;
 
-    private String drinkPrice;
+    private int drinkPrice;
 
-    public Drinks(String drinkPrice) {
+    public Drinks(int drinkPrice) {
         this.drinkPrice = drinkPrice;
     }
 
-    public String getDrinkPrice() {
+    public int getDrinkPrice() {
         return drinkPrice;
     }
 }

@@ -11,8 +11,8 @@ public enum DrinksMachine {
     TEA("Tea"),
     LEMONADE("Lemonade"),
     MOJITO("Mojito"),
-    MINERAL_WATER("Mineral water"),
-    COCA_COLA("Coca-cola");
+    MINERAL_WATER("Water"),
+    COCA_COLA("Cola");
 
     private String drink;
 
