@@ -16,7 +16,6 @@ public class Main {
 
         DrinksMachine[] drinksMachines = DrinksMachine.values();
         DrinksMachine drinksChoice = null;
-//        Drinks drinks = null;
 
         int amount = 0;
         int cost = 0;
@@ -60,6 +59,39 @@ public class Main {
                     number = scanner.nextInt();
                     amount += number;
                     if (number >= 0) {
+                        switch (drinksChoice) {
+                            case COFFEE: {
+                                cost = number * Drinks.COFFEE_PRICE;
+                                coffeeMaker(number, cost);
+                                break;
+                            }
+                            case TEA: {
+                                cost = number * Drinks.TEA_PRICE;
+                                teaMaker(number, cost);
+                                break;
+                            }
+                            case LEMONADE: {
+                                cost = number * Drinks.LEMONADE_PRICE;
+                                lemonadeMaker(number, cost);
+                                break;
+                            }
+                            case MOJITO: {
+                                cost = number * Drinks.MOJITO_PRICE;
+                                mojitoMaker(number, cost);
+                                break;
+                            }
+                            case WATER: {
+                                cost = number * Drinks.WATER_PRICE;
+                                mineralWaterMaker(number, cost);
+                                break;
+                            }
+                            case COLA: {
+                                cost = number * Drinks.COLA_PRICE;
+                                cocaColaMaker(number, cost);
+                                break;
+                            }
+                        }
+                        totalCost += cost;
                         break;
                     } else {
                         System.out.println("Please enter positive number");
@@ -84,65 +116,32 @@ public class Main {
                 }
             }
         }
-
-        switch (drinksChoice) {
-            case COFFEE: {
-                cost = number * Drinks.COFFEE_PRICE;
-                coffeeMaker(number, cost);
-                break;
-            }
-            case TEA: {
-                cost = number * Drinks.TEA_PRICE;
-                teaMaker(number, cost);
-                break;
-            }
-            case LEMONADE: {
-                cost = number * Drinks.LEMONADE_PRICE;
-                lemonadeMaker(number, cost);
-                break;
-            }
-            case MOJITO: {
-                cost = number * Drinks.MOJITO_PRICE;
-                mojitoMaker(number, cost);
-                break;
-            }
-            case WATER: {
-                cost = number * Drinks.WATER_PRICE;
-                mineralWaterMaker(number, cost);
-                break;
-            }
-            case COLA: {
-                cost = number * Drinks.COLA_PRICE;
-                cocaColaMaker(number, cost);
-                break;
-            }
-        }
         System.out.println("Please take your order");
         System.out.println("You choose " + amount + " drinks");
         System.out.println("You must to pay " + totalCost + "grn");
     }
 
     static void coffeeMaker(int number, int cost) {
-        System.out.println("You choose " + number + " " + COFFEE + " it cost " + cost + "grn");
+        System.out.println("You choose " + number + " " + COFFEE + ". It cost " + cost + "grn");
     }
 
     static void teaMaker(int number, int cost) {
-        System.out.println("You choose " + number + " " + TEA + " it cost " + cost + "grn");
+        System.out.println("You choose " + number + " " + TEA + ". It cost " + cost + "grn");
     }
 
     static void lemonadeMaker(int number, int cost) {
-        System.out.println("You choose " + number + " " + LEMONADE + " it cost " + cost + "grn");
+        System.out.println("You choose " + number + " " + LEMONADE + ". It cost " + cost + "grn");
     }
 
     static void mojitoMaker(int number, int cost) {
-        System.out.println("You choose " + number + " " + MOJITO + " it cost " + cost + "grn");
+        System.out.println("You choose " + number + " " + MOJITO + ". It cost " + cost + "grn");
     }
 
     static void mineralWaterMaker(int number, int cost) {
-        System.out.println("You choose " + number + " " + WATER + " it cost " + cost + "grn");
+        System.out.println("You choose " + number + " " + WATER + ". It cost " + cost + "grn");
     }
 
     static void cocaColaMaker(int number, int cost) {
-        System.out.println("You choose " + number + " " + COLA + " it cost " + cost + "grn");
+        System.out.println("You choose " + number + " " + COLA + ". It cost " + cost + "grn");
     }
 }
