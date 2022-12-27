@@ -9,13 +9,13 @@ public class Drinks {
     public static final int WATER_PRICE = 20;
     public static final int COLA_PRICE = 50;
 
-    private int drinkPrice;
+    private final int drinkPrice;
 
     public Drinks(int drinkPrice) {
         this.drinkPrice = drinkPrice;
     }
 
-    public int getDrinkPrice(DrinksMachine drinksMachine) {
+    public int getDrinkPrice() {
         return drinkPrice;
     }
 }

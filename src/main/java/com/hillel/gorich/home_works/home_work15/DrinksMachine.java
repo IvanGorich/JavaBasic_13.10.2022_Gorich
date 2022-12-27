@@ -9,7 +9,7 @@ public enum DrinksMachine {
     WATER("Water"),
     COLA("Cola");
 
-    private String drink;
+    private final String drink;
 
     DrinksMachine(String drink) {
         this.drink = drink;

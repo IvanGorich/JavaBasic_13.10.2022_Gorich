@@ -19,7 +19,7 @@ public class Main {
 
         int amount = 0;
         int cost = 0;
-        int number = 0;
+        int number;
         int totalCost = 0;
 
         Scanner scanner = new Scanner(System.in);
@@ -47,13 +47,13 @@ public class Main {
                 if (drinksChoice != null) {
                     break;
                 } else {
-                    System.out.println("Wrong data, try again");
+                    System.out.println("Wrong data, try again!");
                     scanner.nextLine();
                 }
             }
 
             while (true) {
-                System.out.println("How many cups of " + drinksChoice + " do you want?");
+                System.out.println("How many cups of " + drinksChoice.getDrink() + " do you want?");
 
                 if (scanner.hasNextInt()) {
                     number = scanner.nextInt();
@@ -94,10 +94,10 @@ public class Main {
                         totalCost += cost;
                         break;
                     } else {
-                        System.out.println("Please enter positive number");
+                        System.out.println("Please enter positive number!");
                     }
                 } else {
-                    System.out.println("Wrong data, please enter integer");
+                    System.out.println("Wrong data, please enter integer!");
                     scanner.nextLine();
                 }
             }
@@ -112,36 +112,36 @@ public class Main {
                     b = false;
                     break;
                 } else {
-                    System.out.println("Wrong data, try again");
+                    System.out.println("Wrong data, try again!");
                 }
             }
         }
-        System.out.println("Please take your order");
-        System.out.println("You choose " + amount + " drinks");
-        System.out.println("You must to pay " + totalCost + "grn");
+        System.out.println("Please take your order!");
+        System.out.println("You choose " + amount + " drinks.");
+        System.out.println("You have to pay " + totalCost + "grn.");
     }
 
     static void coffeeMaker(int number, int cost) {
-        System.out.println("You choose " + number + " " + COFFEE + ". It cost " + cost + "grn");
+        System.out.println("You choose " + number + " " + COFFEE.getDrink() + ". It cost " + cost + "grn.");
     }
 
     static void teaMaker(int number, int cost) {
-        System.out.println("You choose " + number + " " + TEA + ". It cost " + cost + "grn");
+        System.out.println("You choose " + number + " " + TEA.getDrink() + ". It cost " + cost + "grn.");
     }
 
     static void lemonadeMaker(int number, int cost) {
-        System.out.println("You choose " + number + " " + LEMONADE + ". It cost " + cost + "grn");
+        System.out.println("You choose " + number + " " + LEMONADE.getDrink() + ". It cost " + cost + "grn.");
     }
 
     static void mojitoMaker(int number, int cost) {
-        System.out.println("You choose " + number + " " + MOJITO + ". It cost " + cost + "grn");
+        System.out.println("You choose " + number + " " + MOJITO.getDrink() + ". It cost " + cost + "grn.");
     }
 
     static void mineralWaterMaker(int number, int cost) {
-        System.out.println("You choose " + number + " " + WATER + ". It cost " + cost + "grn");
+        System.out.println("You choose " + number + " " + WATER.getDrink() + ". It cost " + cost + "grn.");
     }
 
     static void cocaColaMaker(int number, int cost) {
-        System.out.println("You choose " + number + " " + COLA + ". It cost " + cost + "grn");
+        System.out.println("You choose " + number + " " + COLA.getDrink() + ". It cost " + cost + "grn.");
     }
 }
