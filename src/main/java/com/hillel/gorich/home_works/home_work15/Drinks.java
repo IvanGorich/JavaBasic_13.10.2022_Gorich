@@ -6,8 +6,8 @@ public class Drinks {
     public static final int TEA_PRICE = 35;
     public static final int LEMONADE_PRICE = 25;
     public static final int MOJITO_PRICE = 30;
-    public static final int MINERAL_WATER_PRICE = 20;
-    public static final int COCA_COLA_PRICE = 50;
+    public static final int WATER_PRICE = 20;
+    public static final int COLA_PRICE = 50;
 
     private int drinkPrice;
 
@@ -15,7 +15,7 @@ public class Drinks {
         this.drinkPrice = drinkPrice;
     }
 
-    public int getDrinkPrice() {
+    public int getDrinkPrice(DrinksMachine drinksMachine) {
         return drinkPrice;
     }
 }

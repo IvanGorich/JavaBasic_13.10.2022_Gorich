@@ -16,8 +16,11 @@ public class Main {
 
         DrinksMachine[] drinksMachines = DrinksMachine.values();
         DrinksMachine drinksChoice = null;
+//        Drinks drinks = null;
 
-        int number = -1;
+        int amount = 0;
+        int cost = 0;
+        int number = 0;
         int totalCost = 0;
 
         Scanner scanner = new Scanner(System.in);
@@ -53,9 +56,9 @@ public class Main {
             while (true) {
                 System.out.println("How many cups of " + drinksChoice + " do you want?");
 
-                if (scanner.hasNext()) {
+                if (scanner.hasNextInt()) {
                     number = scanner.nextInt();
-
+                    amount += number;
                     if (number >= 0) {
                         break;
                     } else {
@@ -68,80 +71,78 @@ public class Main {
             }
             scanner.nextLine();
 
-            boolean c = true;
-            while (c) {
-                System.out.println("Would you like something else? Please enter YES or NO");
+            while (true) {
+                System.out.println("Would you like something else? Please enter 'YES' or 'NO'");
                 String a = scanner.nextLine().toUpperCase();
                 if (a.equals("YES")) {
-                    b = true;
                     break;
                 } else if (a.equals("NO")) {
                     b = false;
                     break;
                 } else {
                     System.out.println("Wrong data, try again");
-                    c = true;
                 }
             }
         }
 
         switch (drinksChoice) {
             case COFFEE: {
-                totalCost = number * Drinks.COFFEE_PRICE;
-                coffeeMaker(number, totalCost);
+                cost = number * Drinks.COFFEE_PRICE;
+                coffeeMaker(number, cost);
                 break;
             }
             case TEA: {
-                totalCost = number * Drinks.TEA_PRICE;
-                teaMaker(number, totalCost);
+                cost = number * Drinks.TEA_PRICE;
+                teaMaker(number, cost);
                 break;
             }
             case LEMONADE: {
-                totalCost = number * Drinks.LEMONADE_PRICE;
-                lemonadeMaker(number, totalCost);
+                cost = number * Drinks.LEMONADE_PRICE;
+                lemonadeMaker(number, cost);
                 break;
             }
             case MOJITO: {
-                totalCost = number * Drinks.MOJITO_PRICE;
-                mojitoMaker(number, totalCost);
+                cost = number * Drinks.MOJITO_PRICE;
+                mojitoMaker(number, cost);
                 break;
             }
-            case MINERAL_WATER: {
-                totalCost = number * Drinks.MINERAL_WATER_PRICE;
-                mineralWaterMaker(number, totalCost);
+            case WATER: {
+                cost = number * Drinks.WATER_PRICE;
+                mineralWaterMaker(number, cost);
                 break;
             }
-            case COCA_COLA: {
-                totalCost = number * Drinks.COCA_COLA_PRICE;
-                cocaColaMaker(number, totalCost);
+            case COLA: {
+                cost = number * Drinks.COLA_PRICE;
+                cocaColaMaker(number, cost);
                 break;
             }
         }
         System.out.println("Please take your order");
-        System.out.println("You have to pay " + totalCost);
+        System.out.println("You choose " + amount + " drinks");
+        System.out.println("You must to pay " + totalCost + "grn");
     }
 
-    static void coffeeMaker(int number, int totalCost) {
-        System.out.println("You choose " + number + " " + COFFEE + " it cost " + totalCost + "grn");
+    static void coffeeMaker(int number, int cost) {
+        System.out.println("You choose " + number + " " + COFFEE + " it cost " + cost + "grn");
     }
 
-    static void teaMaker(int number, int totalCost) {
-        System.out.println("You choose " + number + " " + TEA + " it cost " + totalCost + "grn");
+    static void teaMaker(int number, int cost) {
+        System.out.println("You choose " + number + " " + TEA + " it cost " + cost + "grn");
     }
 
-    static void lemonadeMaker(int number, int totalCost) {
-        System.out.println("You choose " + number + " " + LEMONADE + " it cost " + totalCost + "grn");
+    static void lemonadeMaker(int number, int cost) {
+        System.out.println("You choose " + number + " " + LEMONADE + " it cost " + cost + "grn");
     }
 
-    static void mojitoMaker(int number, int totalCost) {
-        System.out.println("You choose " + number + " " + MOJITO + " it cost " + totalCost + "grn");
+    static void mojitoMaker(int number, int cost) {
+        System.out.println("You choose " + number + " " + MOJITO + " it cost " + cost + "grn");
     }
 
-    static void mineralWaterMaker(int number, int totalCost) {
-        System.out.println("You choose " + number + " " + MINERAL_WATER + " it cost " + totalCost + "grn");
+    static void mineralWaterMaker(int number, int cost) {
+        System.out.println("You choose " + number + " " + WATER + " it cost " + cost + "grn");
     }
 
-    static void cocaColaMaker(int number, int totalCost) {
-        System.out.println("You choose " + number + " " + COCA_COLA + " it cost " + totalCost + "grn");
+    static void cocaColaMaker(int number, int cost) {
+        System.out.println("You choose " + number + " " + COLA + " it cost " + cost + "grn");
     }
 }
