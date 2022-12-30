@@ -66,7 +66,7 @@ public class ArrayMatrixTest {
 
     @Test
     public void Test8() {
-        int [][] matrix = null;
+        int[][] matrix = null;
         boolean exists = ArrayMatrix.isQuadratic(matrix);
         assertFalse(exists);
     }

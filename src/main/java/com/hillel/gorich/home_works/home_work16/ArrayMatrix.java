@@ -1,9 +1,5 @@
 package com.hillel.gorich.home_works.home_work16;
 
-// 1. Додайте метод, який буде рахувати середнє арифметичне елементів масиву.
-// 2. Зробіть метод, який прийматиме на вхід двомірну матрицю (двовимірний масив) у та перевіряти чи є вона квадратною
-// 3. В тестовому класі створіть тестову матрицю та передайте її в метод тестованого класу
-
 public class ArrayMatrix {
 
     static int sumArrayElements = 0;
@@ -12,17 +8,21 @@ public class ArrayMatrix {
     public static int getAverageArrayElements(int[] array) {
 
         if (array == null) {
+            System.out.println("No such array exists");
             return -3;
         }
         if (array.length == 0) {
+            System.out.println("This array is empty");
             return -2;
         }
 
         for (int i = 0; i < array.length; i++) {
             sumArrayElements += array[i];
         }
+        System.out.println("Sum of Array Elements = " + sumArrayElements);
         averageArrayElements = ((sumArrayElements) / array.length);
 
+        System.out.println("Average of Array Elements = " + averageArrayElements);
         return averageArrayElements;
     }
 
